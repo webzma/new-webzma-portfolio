@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import clsx from "clsx";
 
 interface ButtonProps {
   children: React.ReactNode;
@@ -9,10 +9,10 @@ export const Button: React.FC<ButtonProps> = ({ children, type }) => {
   return (
     <button
       className={clsx(
-        'text-white px-6 py-2 rounded-lg border-none outline-none rounded-3xl font-bold',
-        type === 'CV' && 'bg-[#2563eb]',
-        type === 'LINKEDIN' && 'bg-white text-gray-900',
-        type === 'GITHUB' && 'bg-[#333] '
+        "px-6 py-2  border-none outline-none rounded-lg font-bold shadow-xl flex items-center gap-x-2",
+        type === "CV" && "bg-white text-gray-800",
+        type === "LINKEDIN" && " bg-[#2563eb] text-white ",
+        type === "GITHUB" && "bg-zinc-900 text-white"
       )}
     >
       {children}
