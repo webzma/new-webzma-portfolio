@@ -69,4 +69,10 @@ body {
   body {
     @apply bg-background text-foreground;
   }
+  ul {
+    @apply list-disc;
+  }
+  ul > li::marker {
+    color: #fef08a; /* Reemplaza con el color deseado */
+  }
 }

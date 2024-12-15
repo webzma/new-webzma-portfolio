@@ -1,4 +1,5 @@
 import React from "react";
+import { MdWeb } from "react-icons/md";
 
 interface SectionProps {
   children: React.ReactNode;
@@ -7,8 +8,10 @@ interface SectionProps {
 
 export const Section: React.FC<SectionProps> = ({ children, subtitle }) => {
   return (
-    <section className="pt-80 pb-40">
-      <h2 className="text-4xl font-bold py-10">{subtitle}</h2>
+    <section className="py-16">
+      <h2 className="text-4xl font-bold py-10 text-white flex items-center gap-x-2">
+        <MdWeb /> {subtitle}
+      </h2>
       {children}
     </section>
   );

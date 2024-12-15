@@ -1,53 +1,84 @@
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { Button } from "../ui/Button";
-import { FaLinkedin } from "react-icons/fa";
-import { PiReadCvLogoBold } from "react-icons/pi";
-import { PiGithubLogoFill } from "react-icons/pi";
+import Link from "next/link";
+import { FaEarthAmericas, FaGithub, FaLinkedin } from "react-icons/fa6";
 
 export function Hero() {
   return (
-    <section className="grid grid-cols-2 pt-60 ">
-      <div className="flex items-center justify-center">
-        <Image
-          src="/avatar.webp"
-          alt="avatar image"
-          width={500}
-          height={500}
-          className="relative size-[350px] rounded-3xl shadow-2xl shadow-zinc-900 object-cover"
-        />
-      </div>
+    <section className="flex flex-col gap-y-6 pt-44">
+      <div className="grid  grid-cols-[1fr,180px] gap-x-20 ">
+        <div>
+          <div className="bg-green-800/60 flex justify-center items-center backdrop-blur-lg border border-green-500 py-1 px-4 rounded-2xl text-green-300 text-sm max-w-[200px]">
+            Disponible para trabajar
+          </div>
 
-      <div className="flex flex-col gap-y-3 justify-center pt-12">
-        <h1 className="text-6xl font-extrabold text-zinc-900">
-          Wilberk Ledezma
-        </h1>
-        <h3 className="text-3xl text-zinc-500 font-semibold">
-          Desarrollador Full-Stack
-        </h3>
-        <p className="text-pretty text-lg w-[490px]">
-          Creando experiencias digitales únicas con código limpio y diseño
-          intuitivo. Transformando ideas en realidad, una línea de código a la
-          vez.
-        </p>
+          <h1 className="text-[65px] font-extrabold text-white">
+            Wilberk Ledezma
+          </h1>
 
-        <div className="flex flex-wrap gap-4 pt-6">
-          <Button type="LINKEDIN">
-            Conectemos en LinkedIn
-            <FaLinkedin size={22} />
-          </Button>
-          <Button type="CV">
-            Descargar CV
-            <PiReadCvLogoBold size={22} />
-          </Button>
+          <p className="text-3xl text-blue-200 -mt-2">
+            Software Engineer & Frontend Developer
+          </p>
 
-          <Button type="GITHUB">
-            Visita mi GitHub
-            <PiGithubLogoFill size={22} />
-          </Button>
+          <div className="mt-4 flex items-center flex-wrap gap-x-3">
+            <Button
+              size="sm"
+              className="bg-gray-400/10 border border-gray-700 rounded-xl  hover:bg-gray-400/20 font-bold"
+            >
+              <FaLinkedin />
+              Linkedin
+            </Button>
+            <Button
+              size="sm"
+              className="bg-gray-400/10 border border-gray-700 rounded-xl  hover:bg-gray-400/20 font-bold"
+            >
+              <FaGithub />
+              GitHub
+            </Button>
+            <Button
+              size="sm"
+              className="bg-gray-400/10 border border-gray-700 rounded-xl  hover:bg-gray-400/20 font-bold"
+            >
+              <FaLinkedin />
+              Descargar CV
+            </Button>
+          </div>
+
+          <p className="text-blue-200 mt-4 text-xl ">
+            Habilidad comprobada en la construcción de aplicaciones web
+            escalables utilizando ReactJS, Next.js y Astro.{" "}
+            <span className=" font-medium text-yellow-200">
+              💼 Constante aprendizaje y búsqueda de nuevas soluciones para
+              mejorar la experiencia del usuario en entornos reales.
+            </span>
+          </p>
+        </div>
+        <div className="flex flex-col gap-y-4">
+          <Image
+            src="/avatar.webp"
+            width={500}
+            height={500}
+            alt="webzma avatar"
+            className="rounded-full size-[150px] object-cover border-gray-900"
+          />
+          <p className="flex items-center gap-x-1 text-gray-300">
+            <FaEarthAmericas size={18} />
+            America/Venezuela
+          </p>
+
+          <div className="flex gap-x-2">
+            <Badge className="px-4 py-1 bg-gray-400/10 border border-gray-700 rounded-xl">
+              Español
+            </Badge>
+            <Badge className="px-4 py-1 bg-gray-400/10 border border-gray-700 rounded-xl">
+              Inglés
+            </Badge>
+          </div>
         </div>
       </div>
 
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#c7c7c7] rounded-full blur-3xl opacity-30 animate-pulse -z-10"></div>
+      <div className="fixed top-1/2 left-1/2 transform -translate-x-[700px] -translate-y-[610px] w-[500px] h-[500px] bg-[#324ef0] rounded-full blur-[90px] opacity-20 -z-10"></div>
     </section>
   );
 }
