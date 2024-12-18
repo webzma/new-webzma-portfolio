@@ -5,7 +5,7 @@ import { FaRegBookmark } from "react-icons/fa6";
 
 export function Header() {
   return (
-    <div className="flex w-full justify-center items-center py-2 fixed left-0 right-0 h-16 bg-transparent">
+    <div className="flex w-full justify-center items-center py-2 fixed left-0 right-0 h-16 bg-transparent z-30">
       <div className="z-10 fixed  rounded-2xl flex items-center p-2 neutral-border-medium border-solid-1 radius-m-4 shadow-l transparent gap-x-2 bg-gray-800 backdrop-blur">
         <a
           href="#"

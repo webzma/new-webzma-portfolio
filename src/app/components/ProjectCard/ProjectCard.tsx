@@ -11,7 +11,7 @@ interface ProjectCardProps {
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <div className="relative min-w-[350px] h-[230px]">
+    <div className="relative min-w-[380px] h-[250px]">
       <img
         src={project.image}
         alt={project.title}

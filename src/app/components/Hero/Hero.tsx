@@ -1,7 +1,6 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import Link from "next/link";
 import { FaEarthAmericas, FaGithub, FaLinkedin } from "react-icons/fa6";
 
 export function Hero() {
