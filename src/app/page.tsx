@@ -1,51 +1,60 @@
 import { Hero } from "./components/Hero";
 import { Section } from "./components/Section";
 import { ProjectCard } from "./components/ProjectCard/ProjectCard";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { FaLinkedin } from "react-icons/fa6";
 
 const projects = [
   {
+    id: 1,
     title: "Countries App",
     description:
-      "Aplicación web para buscar y filtrar países. Información detallada de cada país.",
+      "Aplicación web para buscar y filtrar países. Información detallada de cada país, podrás ver la población, idioma, moneda y más.",
     technologies: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "React"],
     image: "/countries.jpeg",
     demo: "https://webzma.github.io/countries-app/",
     github: "https://github.com/webzma/countries-app",
   },
   {
+    id: 2,
     title: "Todo App",
     description:
-      "Aplicación web para gestionar tareas. Filtrar por estado y fecha de creación.",
+      "Aplicación web para gestionar tareas. Filtrar por estado, marcar como completada y eliminar tareas, está diseñada para ser utilizada en dispositivos móviles también.",
     technologies: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "React"],
     image: "/todoapp.jpeg",
     demo: "https://webzma-todoapp.vercel.app/",
     github: "https://github.com/webzma/todo-app",
   },
   {
+    id: 3,
     title: "Tic Tac Toe",
     description:
-      "Juego de tres en raya. Juega contra la computadora o contra un amigo.",
+      "Juego de tres en raya. Juega contra la computadora o contra un amigo, este es uno de los juegos más populares y fáciles de jugar.",
     technologies: ["HTML", "CSS", "JavaScript", "React"],
     image: "/tictactoe.jpeg",
     demo: "https://webzma-todoapp.vercel.app/",
     github: "https://github.com/webzma/todo-app",
   },
   {
-    title: "Tic Tac Toe",
+    id: 4,
+    title: "GitHub User",
     description:
-      "Juego de tres en raya. Juega contra la computadora o contra un amigo.",
-    technologies: ["HTML", "CSS", "JavaScript", "React"],
+      "Simple aplicación web para buscar usuarios de GitHub. Muestra la información del usuario y sus repositorios, puedes ver los detalles de cada repositorio.",
+    technologies: [
+      "HTML",
+      "CSS",
+      "Tailwind CSS",
+      "JavaScript",
+      "React",
+      "Next.js",
+    ],
     image: "/github-user.jpeg",
     demo: "https://webzma-todoapp.vercel.app/",
     github: "https://github.com/webzma/todo-app",
   },
   {
-    title: "Tic Tac Toe",
+    id: 5,
+    title: "Pokedex",
     description:
-      "Juego de tres en raya. Juega contra la computadora o contra un amigo.",
+      "Aplicación web para buscar y filtrar pokemones. Información detallada de cada pokemón, podrás ver su tipo, habilidades, debilidades y más.",
     technologies: ["HTML", "CSS", "JavaScript", "React"],
     image: "/pokedex.jpeg",
     demo: "https://webzma-todoapp.vercel.app/",
@@ -109,46 +118,7 @@ export default function Home() {
       <Section subtitle="Proyectos destacados">
         <div className="grid grid-cols-1 gap-y-10">
           {projects.map((project) => (
-            <div
-              key={project.title}
-              className="max-w-[920px] w-[90%] flex gap-x-12 bg-[#324ef0]/10  border  p-6 rounded-xl border-blue-400/10 shadow-md shadow-[#324ef0]/5"
-            >
-              <ProjectCard project={project} />
-
-              <div className="flex flex-col">
-                <h2 className="text-white text-2xl font-bold mb-1">
-                  {project.title}
-                </h2>
-                <div className="mb-4">
-                  <Badge className="bg-black text-white font-normal">
-                    Next.js
-                  </Badge>
-                </div>
-
-                <p className="text-blue-100">
-                  Biblioteca de logos SVG de las marcas más populares. +10k
-                  visitas al mes. +2K svgs descargados. Creado desde cero con
-                  Next.js, React y Tailwind CSS.
-                </p>
-
-                <div className="mt-4 flex gap-x-2 items-center">
-                  <Button
-                    size="sm"
-                    className="bg-gray-400/10 border border-gray-700 rounded-xl  hover:bg-gray-400/20 font-bold"
-                  >
-                    <FaLinkedin />
-                    Demo
-                  </Button>
-                  <Button
-                    size="sm"
-                    className="bg-gray-400/10 border border-gray-700 rounded-xl  hover:bg-gray-400/20 font-bold"
-                  >
-                    <FaLinkedin />
-                    Repo
-                  </Button>
-                </div>
-              </div>
-            </div>
+            <ProjectCard key={project.id} project={project} />
           ))}
         </div>
       </Section>
