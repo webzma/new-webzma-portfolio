@@ -8,7 +8,7 @@ const projects = [
     title: "Countries App",
     description:
       "Aplicación web para buscar y filtrar países. Información detallada de cada país, podrás ver la población, idioma, moneda y más.",
-    technologies: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "React"],
+    technologies: ["Tailwind CSS", "React"],
     image: "/countries.jpeg",
     demo: "https://webzma.github.io/countries-app/",
     github: "https://github.com/webzma/countries-app",
@@ -18,7 +18,7 @@ const projects = [
     title: "Todo App",
     description:
       "Aplicación web para gestionar tareas. Filtrar por estado, marcar como completada y eliminar tareas, está diseñada para ser utilizada en dispositivos móviles también.",
-    technologies: ["HTML", "CSS", "JavaScript", "Tailwind CSS", "React"],
+    technologies: ["React"],
     image: "/todoapp.jpeg",
     demo: "https://webzma-todoapp.vercel.app/",
     github: "https://github.com/webzma/todo-app",
@@ -28,7 +28,7 @@ const projects = [
     title: "Tic Tac Toe",
     description:
       "Juego de tres en raya. Juega contra la computadora o contra un amigo, este es uno de los juegos más populares y fáciles de jugar.",
-    technologies: ["HTML", "CSS", "JavaScript", "React"],
+    technologies: ["React"],
     image: "/tictactoe.jpeg",
     demo: "https://webzma-todoapp.vercel.app/",
     github: "https://github.com/webzma/todo-app",
@@ -38,14 +38,7 @@ const projects = [
     title: "GitHub User",
     description:
       "Simple aplicación web para buscar usuarios de GitHub. Muestra la información del usuario y sus repositorios, puedes ver los detalles de cada repositorio.",
-    technologies: [
-      "HTML",
-      "CSS",
-      "Tailwind CSS",
-      "JavaScript",
-      "React",
-      "Next.js",
-    ],
+    technologies: ["Tailwind CSS", "Next.js"],
     image: "/github-user.jpeg",
     demo: "https://webzma-todoapp.vercel.app/",
     github: "https://github.com/webzma/todo-app",
@@ -55,7 +48,7 @@ const projects = [
     title: "Pokedex",
     description:
       "Aplicación web para buscar y filtrar pokemones. Información detallada de cada pokemón, podrás ver su tipo, habilidades, debilidades y más.",
-    technologies: ["HTML", "CSS", "JavaScript", "React"],
+    technologies: ["Tailwind CSS", "Next.js"],
     image: "/pokedex.jpeg",
     demo: "https://webzma-todoapp.vercel.app/",
     github: "https://github.com/webzma/todo-app",
@@ -64,7 +57,7 @@ const projects = [
 
 export default function Home() {
   return (
-    <div className="font-[family-name:var(--font-geist-sans)]">
+    <main>
       <Hero />
 
       <Section subtitle="Experiencia laboral">
@@ -122,6 +115,6 @@ export default function Home() {
           ))}
         </div>
       </Section>
-    </div>
+    </main>
   );
 }

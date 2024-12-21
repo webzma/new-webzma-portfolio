@@ -6,9 +6,9 @@ import { FaEarthAmericas, FaGithub, FaLinkedin } from "react-icons/fa6";
 export function Hero() {
   return (
     <section className="flex flex-col gap-y-6 pt-44">
-      <div className="grid  grid-cols-[1fr,180px] gap-x-20 ">
+      <div className="grid grid-cols-[1fr,180px] gap-x-20 ">
         <div>
-          <div className="bg-green-800/60 flex justify-center items-center backdrop-blur-lg border border-green-500 py-1 px-4 rounded-2xl text-green-300 text-sm max-w-[200px]">
+          <div className="workBadge bg-green-800/60 flex justify-center items-center backdrop-blur-lg border border-green-500 py-1 px-4 rounded-2xl text-green-300 text-sm max-w-[200px]">
             Disponible para trabajar
           </div>
 
@@ -21,27 +21,45 @@ export function Hero() {
           </p>
 
           <div className="mt-4 flex items-center flex-wrap gap-x-3">
-            <Button
-              size="sm"
-              className="bg-gray-400/10 border border-gray-700 rounded-xl  hover:bg-gray-400/20 font-bold"
+            <a
+              href="https://www.linkedin.com/in/wilberk-ledezma-201378207/"
+              target="_blank"
+              rel="noreferrer"
             >
-              <FaLinkedin />
-              Linkedin
-            </Button>
-            <Button
-              size="sm"
-              className="bg-gray-400/10 border border-gray-700 rounded-xl  hover:bg-gray-400/20 font-bold"
+              <Button
+                size="sm"
+                className="bg-gray-400/10 border border-gray-700 rounded-xl  hover:bg-gray-400/20 font-bold"
+              >
+                <FaLinkedin />
+                LinkedIn
+              </Button>
+            </a>
+            <a
+              href="https://github.com/webzma"
+              target="_blank"
+              rel="noreferrer"
             >
-              <FaGithub />
-              GitHub
-            </Button>
-            <Button
-              size="sm"
-              className="bg-gray-400/10 border border-gray-700 rounded-xl  hover:bg-gray-400/20 font-bold"
+              <Button
+                size="sm"
+                className="bg-gray-400/10 border border-gray-700 rounded-xl  hover:bg-gray-400/20 font-bold"
+              >
+                <FaGithub />
+                GitHub
+              </Button>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/wilberk-ledezma-201378207/"
+              target="_blank"
+              rel="noreferrer"
             >
-              <FaLinkedin />
-              Descargar CV
-            </Button>
+              <Button
+                size="sm"
+                className="bg-gray-400/10 border border-gray-700 rounded-xl  hover:bg-gray-400/20 font-bold"
+              >
+                <FaLinkedin />
+                Descargar CV
+              </Button>
+            </a>
           </div>
 
           <p className="text-blue-200 mt-4 text-xl ">

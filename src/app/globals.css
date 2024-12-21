@@ -76,3 +76,43 @@ body {
     color: #fef08a;
   }
 }
+
+.workBadge {
+  overflow: hidden;
+
+  position: relative;
+}
+
+.workBadge:before {
+  animation: shine 2s ease-out infinite;
+}
+
+.workBadge::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100%;
+  background-image: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 30%,
+    rgba(66, 235, 128, 0.447),
+    rgba(255, 255, 255, 0) 70%
+  );
+  top: 0;
+  left: -100px;
+  opacity: 0.6;
+}
+
+@keyframes shine {
+  0% {
+    left: -100px;
+  }
+
+  60% {
+    left: 100%;
+  }
+
+  to {
+    left: 100%;
+  }
+}

@@ -1,6 +1,26 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { FaLinkedin } from "react-icons/fa6";
+import { JSX } from "react";
+import {
+  FaHtml5,
+  FaLinkedin,
+  FaNodeJs,
+  FaPython,
+  FaReact,
+} from "react-icons/fa6";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { SiNextdotjs, SiTailwindcss } from "react-icons/si";
+
+const techBadgesMap: {
+  [key: string]: { color: string; icon: JSX.Element | null };
+} = {
+  "Next.js": { color: "bg-black text-white", icon: <SiNextdotjs size={16} /> },
+  React: { color: "bg-blue-500 text-white", icon: <FaReact size={16} /> },
+  "Tailwind CSS": {
+    color: "bg-blue-800 text-white",
+    icon: <RiTailwindCssFill size={16} />,
+  },
+};
 
 interface ProjectCardProps {
   project: {
@@ -26,8 +46,25 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
       <div className="flex flex-col">
         <h2 className="text-white text-2xl font-bold mb-1">{project.title}</h2>
-        <div className="mb-4">
-          <Badge className="bg-black text-white font-normal">Next.js</Badge>
+        <div className="mb-3 flex gap-2 flex-wrap mt-2 ">
+          {project.technologies.map((tech) => {
+            const techBadge = techBadgesMap[
+              tech as keyof typeof techBadgesMap
+            ] || {
+              color: "bg-gray-500 text-white",
+              icon: null,
+            };
+
+            return (
+              <Badge
+                key={tech}
+                className={`${techBadge.color} font-semibold flex items-center gap-x-1 text-xs`}
+              >
+                {techBadge.icon}
+                {tech}
+              </Badge>
+            );
+          })}
         </div>
 
         <p className="text-blue-100">{project.description}</p>
