@@ -57,10 +57,10 @@ const projects = [
 
 export default function Home() {
   return (
-    <main>
+    <main className="flex flex-col px-4 xl:p-0">
       <Hero />
 
-      <Section subtitle="Experiencia laboral">
+      <Section subtitle="Experiencia laboral" id="experience">
         <article className="relative text-white max-w-[730px] border  p-6 rounded-xl border-blue-400/10 shadow-md shadow-[#324ef0]/5 bg-[#324ef0]/10">
           <div className="mb-4">
             <header className="flex justify-between text-white">
@@ -93,22 +93,22 @@ export default function Home() {
             </li>
           </ul>
 
-          <div className="flex gap-x-4 [&>img]:rounded-2xl mt-12">
+          <div className="flex flex-col md:flex-row flex gap-4 [&>img]:rounded-2xl mt-12">
             <img
               src="/x.jpeg"
               alt="project image"
-              className="w-full h-[230px]"
+              className="w-full h-[280px] md:h-[230px]"
             />
             <img
               src="/y.jpeg"
               alt="project image"
-              className="w-full h-[230px]"
+              className="w-full h-[280px] md:h-[230px]"
             />
           </div>
         </article>
       </Section>
 
-      <Section subtitle="Proyectos destacados">
+      <Section subtitle="Proyectos destacados" id="projects">
         <div className="grid grid-cols-1 gap-y-10">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />

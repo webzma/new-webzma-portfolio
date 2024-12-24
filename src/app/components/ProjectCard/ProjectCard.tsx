@@ -1,26 +1,9 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { JSX } from "react";
-import {
-  FaHtml5,
-  FaLinkedin,
-  FaNodeJs,
-  FaPython,
-  FaReact,
-} from "react-icons/fa6";
+import { FaLinkedin, FaReact } from "react-icons/fa6";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { SiNextdotjs, SiTailwindcss } from "react-icons/si";
-
-const techBadgesMap: {
-  [key: string]: { color: string; icon: JSX.Element | null };
-} = {
-  "Next.js": { color: "bg-black text-white", icon: <SiNextdotjs size={16} /> },
-  React: { color: "bg-blue-500 text-white", icon: <FaReact size={16} /> },
-  "Tailwind CSS": {
-    color: "bg-blue-800 text-white",
-    icon: <RiTailwindCssFill size={16} />,
-  },
-};
+import { SiNextdotjs } from "react-icons/si";
 
 interface ProjectCardProps {
   project: {
@@ -33,10 +16,21 @@ interface ProjectCardProps {
   };
 }
 
+const techBadgesMap: {
+  [key: string]: { color: string; icon: JSX.Element | null };
+} = {
+  "Next.js": { color: "bg-black text-white", icon: <SiNextdotjs size={16} /> },
+  React: { color: "bg-blue-500 text-white", icon: <FaReact size={16} /> },
+  "Tailwind CSS": {
+    color: "bg-blue-800 text-white",
+    icon: <RiTailwindCssFill size={16} />,
+  },
+};
+
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <div className="max-w-[920px] w-[90%] flex gap-x-12 bg-[#324ef0]/10  border  p-6 rounded-xl border-blue-400/10 shadow-md shadow-[#324ef0]/5">
-      <div className="relative min-w-[340px] h-[220px]">
+    <div className="max-w-[920px] w-full md:w-[90%] flex flex-col gap-y-3 md:flex-row gap-x-8 bg-[#324ef0]/10  border  p-6 rounded-xl border-blue-400/10 shadow-md shadow-[#324ef0]/5">
+      <div className="relative min-w-[340px] h-[290px] md:h-[220px]">
         <img
           src={project.image}
           alt={project.title}
