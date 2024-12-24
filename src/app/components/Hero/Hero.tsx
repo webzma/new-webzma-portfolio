@@ -5,7 +5,7 @@ import { FaEarthAmericas, FaGithub, FaLinkedin } from "react-icons/fa6";
 
 export function Hero() {
   return (
-    <section className="flex flex-col gap-y-6 pt-44" id="main">
+    <section className="flex flex-col gap-y-6 pt-24 md:pt-44" id="main">
       <div className="grid xl:grid-cols-[1fr,180px] gap-x-20">
         <div>
           <div className="workBadge bg-green-800/60 flex justify-center items-center backdrop-blur-lg border border-green-500 py-1 px-4 rounded-2xl text-green-300 text-xs sm:text-sm max-w-[170px] sm:max-w-[200px]">
@@ -66,7 +66,7 @@ export function Hero() {
             </a>
           </div>
 
-          <p className="text-blue-200 mt-4 text-md md:text-xl">
+          <p className="text-blue-200 mt-4 text-lg md:text-xl">
             Habilidad comprobada en la construcción de aplicaciones web
             escalables utilizando ReactJS, Next.js y Astro.{" "}
             <span className=" font-medium text-yellow-200">
@@ -100,7 +100,7 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="fixed top-1/2 left-1/2 transform -translate-x-[700px] -translate-y-[610px] w-[500px] h-[500px] bg-[#324ef0] rounded-full blur-[90px] opacity-20 -z-10"></div>
+      <div className="fixed top-1/2 left-1/2 transform sm:-translate-x-[700px] -translate-x-[370px]  -translate-y-[610px] w-[500px] h-[500px] bg-[#324ef0] rounded-full blur-[90px] opacity-20 -z-10"></div>
     </section>
   );
 }

@@ -69,7 +69,7 @@ export default function Home() {
             </header>
             <p className="text-yellow-200 font-semibold">Frontend Developer</p>
           </div>
-          <ul className="list-disc pl-10 text-blue-100 flex flex-col gap-y-4 text-md">
+          <ul className="list-disc pl-4 md:pl-10 text-blue-100 flex flex-col gap-y-4 text-md">
             <li>
               <b className="font-bold text-blue-50">Maquetación: </b>
               Implementación de la estructura y diseño visual del sitio web
