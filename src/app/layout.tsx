@@ -24,6 +24,7 @@ export default function RootLayout({
       <body
         className={`${inter.className} antialiased max-w-[1000px] w-[9o%] mx-auto bg-gray-950`}
       >
+        <Header />
         {children}
         <Footer />
       </body>
