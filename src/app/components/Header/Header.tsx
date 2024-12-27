@@ -5,10 +5,12 @@ import { MdWeb } from "react-icons/md";
 import { FaRegBookmark } from "react-icons/fa6";
 import { cn } from "@/lib/utils";
 import { useEffect, useState } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export function Header() {
   const [activeSection, setActiveSection] = useState("main");
-  console.log(activeSection);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,7 +40,7 @@ export function Header() {
         id="navBar"
         className="z-10 shadow-2xl fixed rounded-2xl flex items-center p-2 neutral-border-medium border-solid-1 radius-m-4 shadow-l transparent gap-x-1 bg-gray-800 backdrop-blur"
       >
-        <a
+        <Link
           aria-label="main"
           href="#main"
           className={cn(
@@ -49,8 +51,8 @@ export function Header() {
         >
           <BiHome size={18} className="hidden sm:block" />
           Inicio
-        </a>
-        <a
+        </Link>
+        <Link
           aria-label="experience"
           href="#experience"
           className={cn(
@@ -61,8 +63,8 @@ export function Header() {
         >
           <MdOutlineWorkOutline size={18} className="hidden sm:block" />
           Experiencia
-        </a>
-        <a
+        </Link>
+        <Link
           aria-label="projects"
           href="#projects"
           className={cn(
@@ -73,18 +75,19 @@ export function Header() {
         >
           <MdWeb size={18} className="hidden sm:block" />
           Proyectos
-        </a>
-        <a
-          href="#"
+        </Link>
+        <Link
+          href="/blog"
           className={cn(
             "rounded-2xl px-2 sm:px-4 py-1 text-xs sm:text-sm font-medium flex items-center gap-x-2",
             activeSection === "blog" && "text-[#6078ff]",
-            activeSection !== "blog" && "text-white"
+            activeSection !== "blog" && "text-white",
+            pathname === "/blog" && "text-[#6078ff]"
           )}
         >
           <FaRegBookmark size={16} className="hidden sm:block" />
           Blog
-        </a>
+        </Link>
       </div>
     </div>
   );
