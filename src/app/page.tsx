@@ -30,8 +30,8 @@ const projects = [
       "Juego de tres en raya. Juega contra la computadora o contra un amigo, este es uno de los juegos más populares y fáciles de jugar.",
     technologies: ["React"],
     image: "/tictactoe.jpeg",
-    demo: "https://webzma-todoapp.vercel.app/",
-    github: "https://github.com/webzma/todo-app",
+    demo: "https://webzma.github.io/tic-tac-toe/",
+    github: "https://github.com/webzma/tic-tac-toe",
   },
   {
     id: 4,
@@ -40,8 +40,8 @@ const projects = [
       "Simple aplicación web para buscar usuarios de GitHub. Muestra la información del usuario y sus repositorios, puedes ver los detalles de cada repositorio.",
     technologies: ["Tailwind CSS", "Next.js"],
     image: "/github-user.jpeg",
-    demo: "https://webzma-todoapp.vercel.app/",
-    github: "https://github.com/webzma/todo-app",
+    demo: "https://github.com/webzma/profile-users-github-app",
+    github: "https://profile-users-github-app.vercel.app/",
   },
   {
     id: 5,
@@ -50,8 +50,18 @@ const projects = [
       "Aplicación web para buscar y filtrar pokemones. Información detallada de cada pokemón, podrás ver su tipo, habilidades, debilidades y más.",
     technologies: ["Tailwind CSS", "Next.js"],
     image: "/pokedex.jpeg",
-    demo: "https://webzma-todoapp.vercel.app/",
-    github: "https://github.com/webzma/todo-app",
+    demo: "https://pokedex-webzma.vercel.app/",
+    github: "https://github.com/webzma/pokedex-webzma",
+  },
+  {
+    id: 6,
+    title: "Tesla Landing Page",
+    description:
+      "Landing page de Tesla, con animaciones y transiciones. Se utilizó Astro para la creación de la aplicación.",
+    technologies: ["Tailwind CSS", "Astro"],
+    image: "/tesla-landing.jpeg",
+    demo: "https://tesla-landing-t6yd.vercel.app/",
+    github: "https://github.com/webzma/tesla-landing",
   },
 ];
 

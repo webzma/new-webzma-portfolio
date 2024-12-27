@@ -1,9 +1,8 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { JSX } from "react";
-import { FaLinkedin, FaReact } from "react-icons/fa6";
-import { RiTailwindCssFill } from "react-icons/ri";
-import { SiNextdotjs } from "react-icons/si";
+import { FaLinkedin } from "react-icons/fa6";
+import { Astro, Next, Reactjs, Tailwind } from "@react-symbols/icons";
 
 interface ProjectCardProps {
   project: {
@@ -16,14 +15,26 @@ interface ProjectCardProps {
   };
 }
 
+const sizeIcon = 22;
+
 const techBadgesMap: {
   [key: string]: { color: string; icon: JSX.Element | null };
 } = {
-  "Next.js": { color: "bg-black text-white", icon: <SiNextdotjs size={16} /> },
-  React: { color: "bg-blue-500 text-white", icon: <FaReact size={16} /> },
+  "Next.js": {
+    color: "bg-black/90 text-white",
+    icon: <Next width={sizeIcon} height={sizeIcon} />,
+  },
+  React: {
+    color: "bg-blue-900/70 text-white",
+    icon: <Reactjs width={sizeIcon} height={sizeIcon} />,
+  },
   "Tailwind CSS": {
     color: "bg-blue-800 text-white",
-    icon: <RiTailwindCssFill size={16} />,
+    icon: <Tailwind width={sizeIcon} height={sizeIcon} />,
+  },
+  Astro: {
+    color: "bg-orange-800/40 text-white",
+    icon: <Astro width={sizeIcon} height={sizeIcon} />,
   },
 };
 
@@ -64,20 +75,24 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
         <p className="text-blue-100">{project.description}</p>
 
         <div className="mt-4 gap-x-2 items-center flex flex-1">
-          <Button
-            size="sm"
-            className="bg-gray-400/10 border border-gray-700 rounded-xl  hover:bg-gray-400/20 font-bold"
-          >
-            <FaLinkedin />
-            Demo
-          </Button>
-          <Button
-            size="sm"
-            className="bg-gray-400/10 border border-gray-700 rounded-xl  hover:bg-gray-400/20 font-bold"
-          >
-            <FaLinkedin />
-            Repo
-          </Button>
+          <a href={project.demo} target="_blank" rel="noreferrer">
+            <Button
+              size="sm"
+              className="bg-gray-400/10 border border-gray-700 rounded-xl  hover:bg-gray-400/20 font-bold"
+            >
+              <FaLinkedin />
+              Demo
+            </Button>
+          </a>
+          <a href={project.github} target="_blank" rel="noreferrer">
+            <Button
+              size="sm"
+              className="bg-gray-400/10 border border-gray-700 rounded-xl  hover:bg-gray-400/20 font-bold"
+            >
+              <FaLinkedin />
+              Repo
+            </Button>
+          </a>
         </div>
       </div>
     </div>
