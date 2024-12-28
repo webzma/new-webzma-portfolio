@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} antialiased max-w-[1000px] w-[9o%] mx-auto bg-gray-950`}
+        className={`${inter.className} antialiased max-w-[950px] w-[9o%] mx-auto bg-gray-950`}
       >
         <Header />
         {children}

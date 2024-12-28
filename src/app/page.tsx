@@ -1,6 +1,21 @@
 import { Hero } from "./components/Hero";
 import { Section } from "./components/Section";
 import { ProjectCard } from "./components/ProjectCard/ProjectCard";
+import ExperienceCard from "./components/ExperienceCard/ExperienceCard";
+import JavaScript from "./components/TechIcons/JavaScript";
+import TypeScript from "./components/TechIcons/TypeScript";
+import ReactI from "./components/TechIcons/React";
+import TailwindCSS from "./components/TechIcons/Tailwind";
+import Nextjs from "./components/TechIcons/Next";
+import Astro from "./components/TechIcons/Astro";
+import Nodejs from "./components/TechIcons/Node";
+import Expressjs from "./components/TechIcons/Express";
+import MySQL from "./components/TechIcons/Mysql";
+import PostgreSQL from "./components/TechIcons/Postgres";
+import Git from "./components/TechIcons/Git";
+import Github from "./components/TechIcons/GitHub";
+import GitLab from "./components/TechIcons/GitLab";
+import GitHubCopilot from "./components/TechIcons/Copilot";
 
 const projects = [
   {
@@ -65,65 +80,47 @@ const projects = [
   },
 ];
 
+const tecnologies = {
+  languages: ["JavaScript", "TypeScript"],
+  frotend: ["React", "Next.js", "Tailwind CSS", "Astro", "Alpine.js"],
+  backend: ["Node", "Express", "mySQL", "PostgreSQL"],
+  others: ["Git", "GitHub", "GitLab", "Figma", "VS Code"],
+};
+
 export default function Home() {
   return (
     <main className="flex flex-col px-4 xl:p-0">
       <Hero />
 
-      <Section subtitle="Experiencia laboral" id="experience">
-        <article className="relative text-white max-w-[730px] border  p-6 rounded-xl border-blue-400/10 shadow-md shadow-[#324ef0]/5 bg-[#324ef0]/10">
-          <div className="mb-4">
-            <header className="flex justify-between text-white">
-              <span className="text-2xl font-bold">Seriesly</span>
-              <span>8 meses / España</span>
-            </header>
-            <p className="text-yellow-200 font-semibold">Frontend Developer</p>
-          </div>
-          <ul className="list-disc pl-4 md:pl-10 text-blue-100 flex flex-col gap-y-4 text-md">
-            <li>
-              <b className="font-bold text-blue-50">Maquetación: </b>
-              Implementación de la estructura y diseño visual del sitio web
-              utilizando HTML y CSS (TailwindCSS).
-            </li>
-            <li>
-              <b className="font-bold text-blue-50">Desarrollo Frontend: </b>
-              Implementación de la estructura y diseño visual del sitio web
-              utilizando HTML y CSS (TailwindCSS). Se complementó para darle
-              vida al proyecto con Alpine.js
-            </li>
-            <li>
-              <b className="font-bold text-blue-50">Optimización: </b>
-              Asegurar un rendimiento óptimo del sitio web en diferentes
-              navegadores y dispositivos.
-            </li>
-            <li>
-              <b className="font-bold text-blue-50">Mantenimiento: </b>
-              Corrección de errores y actualización del código para garantizar
-              el buen funcionamiento del sitio web
-            </li>
-          </ul>
-
-          <div className="flex flex-col md:flex-row flex gap-4 [&>img]:rounded-2xl mt-12">
-            <img
-              src="/x.jpeg"
-              alt="project image"
-              className="w-full h-[280px] md:h-[230px]"
-            />
-            <img
-              src="/y.jpeg"
-              alt="project image"
-              className="w-full h-[280px] md:h-[230px]"
-            />
-          </div>
-        </article>
+      <Section subtitle="Experiencia" id="experience">
+        <ExperienceCard />
       </Section>
 
-      <Section subtitle="Proyectos destacados" id="projects">
+      <Section subtitle="Proyectos" id="projects">
         <div className="grid grid-cols-1 gap-y-10">
           {projects.map((project) => (
             <ProjectCard key={project.id} project={project} />
           ))}
         </div>
+      </Section>
+
+      <Section subtitle="Tecnologías" id="projects">
+        <article className="rounded-xl p-6 flex gap-8 flex-wrap">
+          <JavaScript className="size-20" />
+          <TypeScript className="size-20" />
+          <ReactI className="size-20" />
+          <TailwindCSS className="size-20" />
+          <Nextjs className="size-20" />
+          <Astro className="size-20" />
+          <Nodejs className="size-20" />
+          <Expressjs className="size-20" />
+          <MySQL className="size-20" />
+          <PostgreSQL className="size-20" />
+          <Git className="size-20" />
+          <Github className="size-20" />
+          <GitLab className="size-20" />
+          <GitHubCopilot className="size-20" />
+        </article>
       </Section>
     </main>
   );

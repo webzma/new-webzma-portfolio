@@ -2,7 +2,10 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { JSX } from "react";
 import { FaLinkedin } from "react-icons/fa6";
-import { Astro, Next, Reactjs, Tailwind } from "@react-symbols/icons";
+import Nextjs from "../TechIcons/Next";
+import Astro from "../TechIcons/Astro";
+import TailwindCSS from "../TechIcons/Tailwind";
+import ReactI from "../TechIcons/React";
 
 interface ProjectCardProps {
   project: {
@@ -15,33 +18,31 @@ interface ProjectCardProps {
   };
 }
 
-const sizeIcon = 22;
-
 const techBadgesMap: {
   [key: string]: { color: string; icon: JSX.Element | null };
 } = {
   "Next.js": {
     color: "bg-black/90 text-white",
-    icon: <Next width={sizeIcon} height={sizeIcon} />,
+    icon: <Nextjs className="size-5" />,
   },
   React: {
     color: "bg-blue-900/70 text-white",
-    icon: <Reactjs width={sizeIcon} height={sizeIcon} />,
+    icon: <ReactI className="size-5" />,
   },
   "Tailwind CSS": {
     color: "bg-blue-800 text-white",
-    icon: <Tailwind width={sizeIcon} height={sizeIcon} />,
+    icon: <TailwindCSS className="size-5" />,
   },
   Astro: {
     color: "bg-orange-800/40 text-white",
-    icon: <Astro width={sizeIcon} height={sizeIcon} />,
+    icon: <Astro className="size-5" />,
   },
 };
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <div className="max-w-[920px] w-full md:w-[90%] flex flex-col gap-y-3 md:flex-row gap-x-8 bg-[#324ef0]/10  border  p-6 rounded-xl border-blue-400/10 shadow-md shadow-[#324ef0]/5">
-      <div className="relative min-w-[340px] h-[290px] md:h-[220px]">
+      <div className="relative md:min-w-[360px] h-[290px] md:h-[220px]">
         <img
           src={project.image}
           alt={project.title}

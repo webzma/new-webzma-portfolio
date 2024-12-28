@@ -1,4 +1,5 @@
 "use client";
+
 import { BiHome } from "react-icons/bi";
 import { MdOutlineWorkOutline } from "react-icons/md";
 import { MdWeb } from "react-icons/md";
@@ -11,6 +12,10 @@ import { usePathname } from "next/navigation";
 export function Header() {
   const [activeSection, setActiveSection] = useState("main");
   const pathname = usePathname();
+
+  if (pathname === "/blog") {
+    return null;
+  }
 
   useEffect(() => {
     const handleScroll = () => {
