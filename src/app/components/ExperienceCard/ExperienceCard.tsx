@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function ExperienceCard() {
   return (
     <article className="relative text-white max-w-[730px] border  p-6 rounded-xl border-blue-400/10 shadow-md shadow-[#324ef0]/5 bg-[#324ef0]/10">
@@ -33,15 +35,19 @@ export default function ExperienceCard() {
       </ul>
 
       <div className="flex flex-col md:flex-row flex gap-4 [&>img]:rounded-2xl mt-12">
-        <img
+        <Image
           src="/x.jpeg"
           alt="project image"
-          className="w-full h-[280px] md:h-[230px]"
+          className="w-full h-[280px] md:h-[230px] object-cover"
+          width={700}
+          height={700}
         />
-        <img
+        <Image
           src="/y.jpeg"
           alt="project image"
-          className="w-full h-[280px] md:h-[230px]"
+          className="w-full h-[280px] md:h-[230px] object-cover"
+          width={700}
+          height={700}
         />
       </div>
     </article>

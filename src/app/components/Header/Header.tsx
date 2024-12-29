@@ -13,10 +13,6 @@ export function Header() {
   const [activeSection, setActiveSection] = useState("main");
   const pathname = usePathname();
 
-  if (pathname === "/blog") {
-    return null;
-  }
-
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll("section");
@@ -38,6 +34,10 @@ export function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  if (pathname === "/blog") {
+    return null;
+  }
 
   return (
     <div className="flex w-full justify-center items-center py-2 fixed left-0 right-0 h-14 bg-transparent z-30 backdrop-blur">
