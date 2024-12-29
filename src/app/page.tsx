@@ -80,13 +80,6 @@ const projects = [
   },
 ];
 
-const tecnologies = {
-  languages: ["JavaScript", "TypeScript"],
-  frotend: ["React", "Next.js", "Tailwind CSS", "Astro", "Alpine.js"],
-  backend: ["Node", "Express", "mySQL", "PostgreSQL"],
-  others: ["Git", "GitHub", "GitLab", "Figma", "VS Code"],
-};
-
 export default function Home() {
   return (
     <main className="flex flex-col px-4 xl:p-0">
