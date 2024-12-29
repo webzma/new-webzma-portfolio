@@ -42,7 +42,7 @@ const techBadgesMap: {
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <div className="max-w-[920px] w-full md:w-[90%] flex flex-col gap-y-3 md:flex-row gap-x-8 bg-[#324ef0]/10  border  p-6 rounded-xl border-blue-400/10 shadow-md shadow-[#324ef0]/5">
+    <div className="max-w-[920px] w-full md:w-[90%] flex flex-col gap-y-3 md:flex-row gap-x-8 bg-[#324ef0]/10 border p-3 md:p-6 rounded-xl border-blue-400/10 shadow-md shadow-[#324ef0]/5">
       <div className="relative md:min-w-[360px] h-[290px] md:h-[220px]">
         <Image
           src={project.image}
