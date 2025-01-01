@@ -20,7 +20,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
+      <head>
+        <link rel="icon" href="/favicon.svg" />
+      </head>
       <body
         className={`${inter.className} antialiased max-w-[950px] w-[9o%] mx-auto bg-gray-950`}
       >
