@@ -55,8 +55,8 @@ const projects = [
       "Simple aplicación web para buscar usuarios de GitHub. Muestra la información del usuario y sus repositorios, puedes ver los detalles de cada repositorio.",
     technologies: ["Tailwind CSS", "Next.js"],
     image: "/github-user.jpeg",
-    demo: "https://github.com/webzma/profile-users-github-app",
-    github: "https://profile-users-github-app.vercel.app/",
+    github: "https://github.com/webzma/profile-users-github-app",
+    demo: "https://profile-users-github-app.vercel.app/",
   },
   {
     id: 5,

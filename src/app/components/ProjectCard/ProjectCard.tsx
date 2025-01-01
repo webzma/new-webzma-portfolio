@@ -1,12 +1,13 @@
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { JSX } from "react";
-import { FaLinkedin } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa6";
 import Nextjs from "../TechIcons/Next";
 import Astro from "../TechIcons/Astro";
 import TailwindCSS from "../TechIcons/Tailwind";
 import ReactI from "../TechIcons/React";
 import Image from "next/image";
+import { IoIosBrowsers } from "react-icons/io";
 
 interface ProjectCardProps {
   project: {
@@ -84,7 +85,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               size="sm"
               className="bg-gray-400/10 border border-gray-700 rounded-xl  hover:bg-gray-400/20 font-bold"
             >
-              <FaLinkedin />
+              <IoIosBrowsers />
               Demo
             </Button>
           </a>
@@ -93,7 +94,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               size="sm"
               className="bg-gray-400/10 border border-gray-700 rounded-xl  hover:bg-gray-400/20 font-bold"
             >
-              <FaLinkedin />
+              <FaGithub />
               Repo
             </Button>
           </a>
