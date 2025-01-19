@@ -6,7 +6,7 @@ export default function ExperienceCard() {
       <div className="mb-4">
         <header className="flex justify-between text-white">
           <span className="text-2xl font-bold">Seriesly</span>
-          <span>8 meses / España</span>
+          <span>8 meses / En remoto</span>
         </header>
         <p className="text-yellow-200 font-semibold">Frontend Developer</p>
       </div>

@@ -55,7 +55,11 @@ export function Hero() {
                 GitHub
               </Button>
             </a>
-            <a href="/Wilberk-Ledezma-CV.pdf" target="_blank" rel="noreferrer">
+            <a
+              href="/CV_Frontend_WilberkLedezma.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
               <Button
                 size="sm"
                 className="bg-gray-400/10 border border-gray-700 rounded-xl  hover:bg-gray-400/20 font-bold"
