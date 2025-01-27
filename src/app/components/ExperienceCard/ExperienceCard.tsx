@@ -34,7 +34,7 @@ export default function ExperienceCard() {
         </li>
       </ul>
 
-      <div className="flex flex-col md:flex-row flex gap-4 [&>img]:rounded-2xl mt-12">
+      <div className="flex flex-col md:flex-row gap-4 [&>img]:rounded-2xl mt-12">
         <Image
           src="/x.jpeg"
           alt="project image"

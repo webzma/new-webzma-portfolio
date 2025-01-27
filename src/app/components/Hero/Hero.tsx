@@ -88,11 +88,6 @@ export function Hero() {
             alt="webzma avatar"
             className="rounded-full size-[150px] object-cover border-gray-900"
           />
-          <p className="flex items-center gap-x-1 text-gray-300">
-            <FaEarthAmericas size={18} />
-            America/Venezuela
-          </p>
-
           <div className="flex gap-x-2">
             <Badge className="px-4 py-1 bg-gray-400/10 border border-gray-700 rounded-xl">
               Español
